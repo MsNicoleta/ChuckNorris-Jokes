@@ -22,9 +22,7 @@ function removeLoadingSpinner() {
     //Show new joke
 function newJoke() {
     showLoadingSpinner();
-
     const joke = apiJokes.value;
-  
     jokeText.textContent = joke;
     removeLoadingSpinner();
 

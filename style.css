@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap');
+
+:root {
+  --BACKGROUND-COLOR: rgba(250, 235, 215, 0.913);
+  --CONTAINER-BACKGROUND-COLOR: rgba(252, 243, 232, 0.905) ;
+  --BOX-SHADOW-COLOR: rgba(0, 0, 0, 0.2) ;
+  --TEXT-BUTTON-COLOR: rgb(112, 25, 25) ;
+  
+}
 html{
     box-sizing: border-box;
 }
@@ -6,9 +14,9 @@ html{
 body{
     margin: 0;
     min-height: 100vh;
-    background-color: rgba(250, 235, 215, 0.913);
+    background-color: var(--BACKGROUND-COLOR);
 
-    color: rgb(4, 4, 77);
+    color: var(--TEXT-BUTTON-COLOR) ;
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     text-align: center;
@@ -23,14 +31,14 @@ body{
     max-width: 900px;
     padding: 20px 30px;
     border-radius: 10px;
-    background-color: rgba(252, 243, 232, 0.905);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--CONTAINER-BACKGROUND-COLOR);
+    box-shadow: 0 10px 10px var(--BOX-SHADOW-COLOR);
 }
 
 .joke-text{
     font-size: 2rem;
+    margin: 1.5em;
 }
-.long-joke{font-size:1.75rem;}/* we use this class in our Javascript to toggle of and on when needed */
 
 .fa-joke-left, .fa-joke-right{
     font-size: 2rem;
@@ -40,7 +48,7 @@ body{
 .button-container{
     margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 button{
@@ -49,12 +57,12 @@ button{
     height: 2.5rem;
     border: none;
     border-radius: 10px;
-    background: rgb(22, 7, 7) ;
+    background: var(--TEXT-BUTTON-COLOR) ;
     color: rgb(252, 243, 232) ;
     outline: none;
     padding: 0.5rem 1.8rem;
     box-shadow: 0 0.3rem rgba(4, 4, 77, 0.237);
-    
+
 }
 
 button:hover{
@@ -63,26 +71,19 @@ button:hover{
 
 button:active{
     transform:translate(0,0.3rem);
-    box-shadow:0 0.1rem rgba(4, 4, 77, 0.237);  
+    box-shadow:0 0.1rem rgba(4, 4, 77, 0.237); 
 }
 
-.twitter-button:hover{
-    color:#38a1f3;
-}
-
-.fa-twitter{
-    font-size: 1.5rem;
-}
 
 /* Loader */
 
 .loader {
-  border: 16px solid rgb(221, 213, 203); /* Light grey */
-  border-top: 16px solid rgb(4, 4, 77); /* Blue */
+  border: 16px solid rgb(221, 213, 203); 
+  border-top: 16px solid rgb(53, 11, 11); 
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite;
+  animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
