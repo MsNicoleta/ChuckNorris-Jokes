@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap');
 
 :root {
-  --BACKGROUND-COLOR: rgba(250, 235, 215, 0.913);
+  --BACKGROUND-COLOR: rgb(235, 214, 199);
   --CONTAINER-BACKGROUND-COLOR: rgba(252, 243, 232, 0.905) ;
   --BOX-SHADOW-COLOR: rgba(0, 0, 0, 0.2) ;
-  --TEXT-BUTTON-COLOR: rgb(112, 25, 25) ;
+  --TEXT-BUTTON-COLOR: rgb(141, 90, 54) ;
   
 }
 html{
@@ -48,7 +48,7 @@ body{
 .button-container{
     margin-top: 15px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 button{
@@ -56,12 +56,12 @@ button{
     font-size: 1.2rem;
     height: 2.5rem;
     border: none;
-    border-radius: 10px;
-    background: var(--TEXT-BUTTON-COLOR) ;
+    border-radius: 20px;
+    background: rgba(171, 100, 50, 0.881);
     color: rgb(252, 243, 232) ;
     outline: none;
     padding: 0.5rem 1.8rem;
-    box-shadow: 0 0.3rem rgba(4, 4, 77, 0.237);
+    box-shadow: 0.0.3rem rgba(141, 90, 54, 0.299);
 
 }
 
