@@ -1,7 +1,6 @@
 const jokeContainer = document.getElementById('joke-container');
 const jokeText = document.getElementById('joke');
-const twitterBtn = document.getElementById('twitter');
-const newJokeBtn = document.getElementById('new-joke');
+const newJokeBtn = document.getElementById('newjoke');
 const loader = document.getElementById('loader');
 
 let apiJokes = [];
@@ -22,7 +21,6 @@ function removeLoadingSpinner() {
     //Show new joke
 function newJoke() {
     showLoadingSpinner();
-
     // Pick a random joke from apiJokes array
     // const joke = apiJokes[Math.floor(Math.random() * apiJokes.value.length)];
     const joke = apiJokes.value;
@@ -35,7 +33,8 @@ function newJoke() {
     //Set Joke, Hide Loader
     jokeText.textContent = joke;
     removeLoadingSpinner();
-    // }
+
+
 }
 
     // Get Jokes From API
@@ -54,15 +53,10 @@ async function getJokes() { /* An asynchronous function can run at any time indi
   }
 }
 
-// Tweet Joke
-function tweetJoke() {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${jokeText.textContent}`;
-    window.open(twitterUrl, '_blank');
-}
 
 //Event Listeners
 newJokeBtn.addEventListener('click', newJoke)
-twitterBtn.addEventListener('click', tweetJoke)
+
 // On load
 getJokes();
 
