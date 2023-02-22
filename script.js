@@ -1,5 +1,6 @@
+document.addEventListener('DOMContentLoaded', () => {
 const jokeContainer = document.getElementById('joke-container');
-const jokeText = document.getElementById('joke');
+const jokeText = document.getElementById('jokes');
 const newJokeBtn = document.getElementById('newjoke');
 const loader = document.getElementById('loader');
 
@@ -21,16 +22,9 @@ function removeLoadingSpinner() {
     //Show new joke
 function newJoke() {
     showLoadingSpinner();
-    // Pick a random joke from apiJokes array
-    // const joke = apiJokes[Math.floor(Math.random() * apiJokes.value.length)];
+
     const joke = apiJokes.value;
-    //check jokeLength to determine styling
-    // if (joke.text.length > 120) {
-    //     jokeText.classList.add('long-joke');
-    // } else {
-    //      jokeText.classList.remove('long-joke');
-    // }
-    //Set Joke, Hide Loader
+  
     jokeText.textContent = joke;
     removeLoadingSpinner();
 
@@ -55,9 +49,10 @@ async function getJokes() { /* An asynchronous function can run at any time indi
 
 
 //Event Listeners
-newJokeBtn.addEventListener('click', newJoke)
+newJokeBtn.addEventListener('click',getJokes)
 
 // On load
 getJokes();
 
 // if we would use our local jokes we would need to comment the function above  Get Jokes From API  and we would commet the getJokes and add  newJoke();  comment the empty Arrray at the top. also the apiJokes from other functions would need to be changed for  localJokes
+});

@@ -54,6 +54,7 @@ button{
     outline: none;
     padding: 0.5rem 1.8rem;
     box-shadow: 0 0.3rem rgba(4, 4, 77, 0.237);
+    
 }
 
 button:hover{
